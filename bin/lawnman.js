@@ -3,7 +3,7 @@
 const { run, parseArgs } = require('..')
 
 const usage = () => {
-  console.log(`usage: lawnman <ext...> <script> --and <ext...> <script>`)
+  console.log(`usage: lawnman <exts> <script...> --and <exts> <script...>`)
   process.exit(1)
 }
 
