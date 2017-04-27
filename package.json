@@ -1,0 +1,32 @@
+{
+  "name": "lawnman",
+  "version": "0.0.0",
+  "description": "The one that maintains the development lawn",
+  "homepage": "https://github.com/MiniGod/lawnman#readme",
+  "bugs": {
+    "url": "https://github.com/MiniGod/lawnman/issues"
+  },
+  "license": "ISC",
+  "author": "Kristjan Broder Lund <kristjan@lund.is> (kbl.is)",
+  "main": "lib/lawnman.js",
+  "bin": "bin/lawnman.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiniGod/lawnman.git"
+  },
+  "scripts": {
+    "dev": "nodemon -x 'npm-run-all --silent -l format test'",
+    "format": "prettier --write --no-color --no-semi --single-quote --trailing-comma es5 'bin/*.js' 'lib/*.js' '*.js'",
+    "test": "ava"
+  },
+  "dependencies": {
+    "debug": "^2.6.5",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2",
+    "yargs": "^7.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "prettier": "^1.2.2"
+  }
+}
