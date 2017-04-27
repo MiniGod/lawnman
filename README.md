@@ -28,9 +28,9 @@ Then use lawnman in your package.json scripts:
 ## Usage
 
 ```
-lawnman <ext> [...<ext>] <script>\
+lawnman <ext>[,<ext>,...] <script> [<script...>]\
   --and\
-  <ext> [...<ext>] <script>\
+  <ext>[,<ext>,...] <script> [<script...>]\
   --and\
   ...
 ```
@@ -43,15 +43,15 @@ lawnman js test
 ```
 
 Watch js and scss files and compile accordingly
-- Runs `npm run babel` when any js changes
+- Runs `npm run babel` when any js file changes
 - Runs `npm run compass` when any scss or png file changes
 
 ```sh
-lawnman js babel --and scss png compass
+lawnman js babel --and scss,png compass
 ```
 
 Watch js files and run multiple npm scripts  
-Runs `npm run test` and `npm run format` when any js files change
+Runs `npm run test` and then `npm run format` when any js files change
 ```sh
 lawnman js test format
 ```
