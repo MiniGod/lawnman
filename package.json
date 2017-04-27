@@ -15,7 +15,7 @@
     "url": "git+https://github.com/MiniGod/lawnman.git"
   },
   "scripts": {
-    "dev": "nodemon -x 'npm-run-all --silent -l format test'",
+    "dev": "./bin/lawnman.js js,json format test",
     "format": "prettier --write --no-color --no-semi --single-quote --trailing-comma es5 'bin/*.js' 'lib/*.js' '*.js'",
     "test": "ava"
   },
