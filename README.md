@@ -13,6 +13,18 @@ Inspired by [`yardman`][yardman].
 npm i lawnman -D
 ```
 
+Then use lawnman in your package.json scripts:
+
+```
+{
+  "scripts": {
+    "dev": "lawnman js,json lint test",
+    "lint": "eslint lib/ --fix",
+    "test": "ava"
+  }
+}
+```
+
 ## Usage
 
 ```
@@ -25,24 +37,23 @@ lawnman <ext> [...<ext>] <script>\
 
 ## Examples
 
-Run the test script when js files change.
+Run the test script when any js file change.
 ```sh
 lawnman js test
 ```
 
 Watch js and scss files and compile accordingly
-- Runs `npm run babel` when `'**/*.js` changes
-- Runs `npm run compass` when `'**/*.scss` or `'**/*.png'` changes
+- Runs `npm run babel` when any js changes
+- Runs `npm run compass` when any scss or png file changes
 
 ```sh
 lawnman js babel --and scss png compass
 ```
-_TODO:_
+
 Watch js files and run multiple npm scripts  
-`--` is only needed when running multiple scripts  
 Runs `npm run test` and `npm run format` when any js files change
 ```sh
-lawnman js -- test format
+lawnman js test format
 ```
 
 
