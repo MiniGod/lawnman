@@ -3,7 +3,7 @@
 > Keeps the lawn clean
 
 `lawnman` runs your npm scripts on changes.
-Uses on [`nodemon`][nodemon] and [`npm-run-all`][npm-run-all].
+Uses [`nodemon`][nodemon] and [`npm-run-all`][npm-run-all].
 
 Inspired by [`yardman`][yardman].
 
