@@ -5,6 +5,8 @@
 `lawnman` runs your npm scripts on changes.
 Uses on [`nodemon`][nodemon] and [`npm-run-all`][npm-run-all].
 
+Inspired by [`yardman`][yardman].
+
 ## Install
 
 ```sh
@@ -46,3 +48,4 @@ lawnman js -- test format
 
 [nodemon]: http://npm.im/nodemon
 [npm-run-all]: http://npm.im/npm-run-all
+[yardman]: http://npm.im/yardman
