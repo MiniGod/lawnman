@@ -7,6 +7,10 @@ const usage = () => {
   process.exit(1)
 }
 
+if (process.argv.length < 3 || ~process.argv.indexOf('--help')) {
+  usage()
+}
+
 let groups
 try {
   groups = parseArgs(process.argv.slice(2))
