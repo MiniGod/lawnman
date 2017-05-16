@@ -56,6 +56,44 @@ Runs `npm run test` and then `npm run format` when any js files change
 lawnman js test format
 ```
 
+# .lawnmanrc
+
+If you only have one script in `package.json` that uses lawnman, you can put the arguments into a `.lawnmanrc` file.
+
+For example, if you have this script in your `package.json`
+
+```json
+{
+  "scripts": {
+    "dev": "lawnman cpp,cc,h,hpp,gyp rebuild e2e --and js,json lint test --and scss compass",
+    "test": "...", ...
+  }
+}
+```
+
+You can put the arguments into a `.lawnmanrc` file to clean up your `package.json` to have it only run `lawnman`. Empty lines is like `--and` in the command line. It also supports comments.
+
+```bash
+# Build addons and run end-to-end tests
+cpp,cc,h,hpp,gyp rebuild e2e
+
+# Lint and test javascript
+js,json lint test
+
+# Compile scss
+scss compass
+```
+
+Your `dev` script will then look much nicer
+
+```json
+{
+  "scripts": {
+    "dev": "lawnman",
+    "test": "...", ...
+  }
+}
+```
 
 [nodemon]: http://npm.im/nodemon
 [npm-run-all]: http://npm.im/npm-run-all
